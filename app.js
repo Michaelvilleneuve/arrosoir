@@ -15,7 +15,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(params.expressMiddleware());
 app.use(logParams);
-app.use('/static', express.static('public'));
+app.use('/', express.static('public'));
 routes(app);
 
 app.listen(port, () => console.log(`🎉  Server started on port ${port}`));
