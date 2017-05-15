@@ -1,9 +1,7 @@
-import users from '../api/services/users/routes';
-import journeys from '../api/services/journeys/routes';
+import users from '../api/services/samples/routes';
 
 const combinedRoutes = (app) => {
   app.use('/api/users', users);
-  app.use('/api/journeys', journeys);
   app.use(render404);
 };
 

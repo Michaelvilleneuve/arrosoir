@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/voyage');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/arrosage');
 const db = mongoose.connection;
 
 db.on('error', () => console.error('Mongodb error'));

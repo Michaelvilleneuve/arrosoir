@@ -6,7 +6,6 @@ import params from 'strong-params';
 import logParams from './middlewares/logs';
 import routes from './config/routes';
 import './config/database';
-import './config/auth';
 
 const app = express();
 const port = process.env.PORT || 8080;
