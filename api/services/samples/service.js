@@ -2,15 +2,16 @@ import Sample from './model';
 
 const Samples = {
   index(req, res) {
-    Sample.findAll();
-    res.sendStatus(200);
+    Sample.find({})
+      .then((samples) => res.json(samples));
   },
 
   create(req, res) {
-    res.sendStatus(200);
+    const sample = new Sample(this.params(req));
+    sample.save().then(s => res.json(s));
   },
 
-  params: (req) => req.parameters.permit('value').value()
+  params: (req) => req.parameters.permit('humidity').value()
 };
 
 export default Samples;

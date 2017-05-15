@@ -1,9 +1,8 @@
 import mongoose from 'mongoose';
 
 const schema = mongoose.Schema({
-  value: { type: String, required: true, },
-  created_at: Date,
-});
+  humidity: Number
+}, { timestamps: true });
 
 const Sample = mongoose.model('Sample', schema);
 
